@@ -1,0 +1,122 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap");
+
+:root {
+  --primary-color: #1c73e6;
+  --primary-color-dark: #1358b3;
+  --dark-color: #333333;
+  --light-color: #f4f4f4;
+  --lose-color: #dc3545;
+  --win-color: #28a745;
+  --modal-duration: 1s;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  line-height: 1.6;
+  height: 100vh;
+  background-color: #0499f2;
+  background-image: linear-gradient(315deg, #049bf21f 0%, #26f594c2 74%);
+  color: #333;
+}
+
+.container {
+  max-width: 700px;
+  margin: auto;
+  overflow: hidden;
+  padding: 0 2rem;
+  text-align: center;
+}
+
+.restart-btn {
+  display: none;
+  background-color: #1963c4;
+  color: rgb(135, 241, 135);
+  padding: 0.4rem 1.3rem;
+  margin-bottom: 1rem;
+  border-radius: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  outline: none;
+  border: none;
+}
+
+.restart-btn:hover {
+  background: var(--primary-color);
+  color: #fff;
+}
+
+.header {
+  text-align: center;
+  margin: 1rem 0;
+}
+
+.header h1 {
+  margin-bottom: 1rem;
+}
+
+.score {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 1rem;
+  font-size: 1.2rem;
+  color: #fff;
+}
+
+.score p {
+  border-radius: 10px;
+  padding: 5px 0;
+  box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.17);
+}
+
+.score p:first-child {
+  background: var(--primary-color);
+}
+
+.score p:last-child {
+  background: var(--dark-color);
+}
+
+.choices {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1.5rem;
+  margin-top: 3rem;
+  text-align: center;
+}
+
+.choice {
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.choice:hover {
+  color: var(--primary-color-dark);
+}
+
+.text-win {
+  color: var(--win-color);
+}
+
+.text-lose {
+  color: var(--lose-color);
+}
+@media (max-width: 700px) {
+  .choice {
+    font-size: 110px;
+  }
+}
+
+@media (max-width: 400px) {
+  .choices {
+    grid-gap: 0.7rem;
+  }
+  .choice {
+    font-size: 77px;
+  }
+}
